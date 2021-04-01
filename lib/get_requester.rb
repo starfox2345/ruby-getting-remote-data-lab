@@ -3,7 +3,6 @@ require 'json'
 require 'open-uri'
 require 'net/http'
 
-
 class GetRequester
     def initialize(url)
         @URL = url
@@ -16,6 +15,7 @@ class GetRequester
     end
 
     def parse_json
-        response_hash = JSON.parse(self.get_response_body)
+        hash = JSON.parse(self.get_response_body)
     end
+
 end
